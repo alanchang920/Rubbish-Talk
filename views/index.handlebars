@@ -1,0 +1,42 @@
+<div class="container-fluid py-3">
+  <h1 class="card-title text-center text-light mt-4">你想對誰說幹話? <i class="fas fa-angry"></i></h1>
+  <form action="/" method="POST">
+    <div class="card-deck text-center mt-5">
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          class="card-img-top" alt="angry-engineer" style="height: 220px">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="job" id="engineer" value="engineer"
+            {{#if options.engineer}}checked{{/if}}>
+          <label class="form-check-label" for="engineer">工程師</label>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          class="card-img-top" alt="angry-designer" style="height: 220px">
+        <div class="card-img-top">
+          <input class="form-check-input" type="radio" name="job" id="designer" value="designer"
+            {{#if options.designer}}checked{{/if}}>
+          <label class="form-check-label" for="designer">設計師</label>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          class="card-img-top" alt="angry-entrepreneur" style="height: 220px">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="job" id="entrepreneur" value="entrepreneur"
+            {{#if options.entrepreneur}}checked{{/if}}>
+          <label class="form-check-label" for="entrepreneur">創業家</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 align-middle ">
+      <button type="submit" class="btn btn-secondary btn-lg text-light mr-4">產生幹話</button>
+      {{#if options.expression}}
+      <textarea class="form-control col-10 text-center" name="rubbish-talk" id="rubbish-talk" rows="3"
+        readonly="readonly">{{options.expression}}</textarea>
+      {{/if}}
+    </div>
+</div>
+</form>
+</div>
